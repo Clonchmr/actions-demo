@@ -1,0 +1,114 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4ff 0%, #faf5ff 50%, #f0fdf4 100%);
+    color: #1c1917;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+
+.target {
+    font-size: 1.125rem;
+    color: #78716c;
+    margin-bottom: 2rem;
+}
+
+.body {
+    max-width: 65%;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #292524;
+}
+
+.body p {
+    margin-bottom: 1.25rem;
+}
+
+.body p:last-child {
+    margin-bottom: 0;
+}
+
+.workflow-container {
+    max-width: 65%;
+    margin: 0 auto 2rem;
+}
+
+#run-btn {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background-color: #1a7f37;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: ui-monospace, monospace;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.15s;
+}
+
+#run-btn:hover:not(:disabled) {
+    background-color: #15692e;
+}
+
+#run-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+#workflow-output {
+    background-color: #0d1117;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#workflow-output:empty {
+    display: none;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #8b949e;
+}
+
+.step.running {
+    color: #e3b341;
+}
+
+.step.done {
+    color: #3fb950;
+}
+
+.step-icon {
+    font-size: 0.9rem;
+    width: 1rem;
+    text-align: center;
+}
+
+.workflow-summary {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #21262d;
+    color: #3fb950;
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+}
